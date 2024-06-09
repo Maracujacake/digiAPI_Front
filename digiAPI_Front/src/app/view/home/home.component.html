@@ -1,0 +1,13 @@
+<mat-toolbar color="accent">
+    <mat-toolbar-row>
+        <a mat-button href="/">DIGI API</a> 
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+        <mat-form-field svgIcon="custom_search_icon" color="accent">
+            <input class="inputPesquisa" (click)="searchDigimon()" matInput placeholder="Search Digimon" [(ngModel)]="searchTerm" (keyup.enter)="searchDigimon()">
+        </mat-form-field>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+<app-digilist [digimonNames]="digimonNames"></app-digilist>

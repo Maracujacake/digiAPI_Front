@@ -1,0 +1,39 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; /* Distribui os cards igualmente ao longo do container */
+  margin: 2%; 
+}
+
+.card-container .example-card {
+  flex: 1 1 calc(33% - 2%); /* 3 imagens padrão na tela inicial*/
+  box-sizing: border-box;
+  margin: 5%;
+}
+
+.digimon-desc {
+  color: rgba(255, 153, 0, 0.932);
+  padding: 2%;
+}
+
+/*icone do card*/
+.example-header-image {
+  background-size: cover;
+}
+
+/* Media Queries  */
+@media (max-width: 768px) {
+  .card-container .example-card {
+    flex: 1 1 calc(50% - 5%);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    flex-direction: column; 
+  }
+
+  .card-container .example-card {
+    flex: 1 1 100%; /* Os cards ocupam 100% da largura do container */
+  }
+}

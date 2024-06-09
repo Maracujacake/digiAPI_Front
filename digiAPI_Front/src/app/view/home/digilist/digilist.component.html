@@ -1,0 +1,18 @@
+<div class="card-container">
+  <div *ngFor="let digimon of digimons" class="card-container">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': 'url(' + digimon.img + ')'}"></div>
+        <mat-card-title style="color:white;">{{ digimon.name }}</mat-card-title>
+        <mat-card-subtitle style="color: grey;">{{ digimon.level }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="digimon.img" [alt]="digimon.name">
+      <mat-card-content>
+        <p class="digimon-desc">
+          {{ digimon.name }} is a {{ digimon.level }} level Digimon.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>  
+
